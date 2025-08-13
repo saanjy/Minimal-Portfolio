@@ -8,34 +8,40 @@ function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`min-h-screen font-sans ${theme === 'dark' ? 'bg-dark text-zinc-100' : 'bg-zinc-50 text-zinc-900'} transition-colors duration-300`}>
+    <div className={`min-h-screen font-sans ${theme === 'dark' ? 'bg-gradient-to-br from-dark via-zinc-900 to-zinc-800 text-zinc-100' : 'bg-gradient-to-br from-zinc-50 via-white to-zinc-100 text-zinc-900'} transition-all duration-500`}>
       <button
         onClick={toggleTheme}
-        className="fixed top-6 right-6 p-2.5 rounded-full bg-white/90 dark:bg-zinc-800/90 shadow-sm hover:shadow-md transition-all duration-200"
+        className="fixed top-6 right-6 p-3 rounded-full bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-110 border border-zinc-200/50 dark:border-zinc-700/50 transition-all duration-300 z-10"
         aria-label="Toggle theme"
       >
-        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+        {theme === 'dark' ? <Sun size={20} className="text-amber-500" /> : <Moon size={20} className="text-indigo-600" />}
       </button>
 
-      <main className="container mx-auto px-6 py-16">
+      <main className="container mx-auto px-6 py-20 relative">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-pink-400/10 to-orange-400/10 rounded-full blur-3xl" />
+        </div>
+        
         <section className="max-w-2xl mx-auto space-y-10">
           {/* Hero Section */}
-          <div className="space-y-2">
-            <h1 className="text-[2.5rem] leading-tight tracking-tight font-medium">
+          <div className="space-y-4 relative z-10">
+            <h1 className="text-[3rem] leading-tight tracking-tight font-bold bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900 dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-100 bg-clip-text text-transparent">
               Hi, i am Sanjay!
             </h1>
-            <div className="space-y-1 text-[1rem] text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              <p>Founder, Student, Data Analyst, Machine Learning Enthusiast, and Networking.</p>
+            <div className="space-y-2 text-[1.1rem] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p className="font-medium">Founder, Student, Data Analyst, Machine Learning Enthusiast, and Networking.</p>
               <p>Passionate about solving problems with data and building intelligent systems.</p>
             </div>
             
             {/* Quick Info */}
-            <div className="flex flex-wrap items-center gap-4 pt-2 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-6 pt-4 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex items-center gap-2 bg-white/50 dark:bg-zinc-800/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50">
                 <MapPin size={14} />
                 <span>India</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-2 bg-white/50 dark:bg-zinc-800/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50">
                 <Calendar size={14} />
                 <span>Available for opportunities</span>
               </div>
@@ -57,28 +63,27 @@ function App() {
           <Section title="Featured Projects">
             <div className="grid gap-6">
               <ProjectCard
-                title="Data Analytics Dashboard"
-                description="Interactive dashboard for visualizing sales data with real-time analytics, built with Python and Streamlit. Features include trend analysis, forecasting, and automated reporting."
-                technologies={['Python', 'Streamlit', 'Pandas', 'Plotly']}
-                githubUrl="https://github.com/san7mr"
-                imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop"
+                title="End-to-End Transformer for Image to Text"
+                description="A complete transformer-based model for image captioning that converts visual content into descriptive text. Implements attention mechanisms and encoder-decoder architecture for accurate image understanding and natural language generation."
+                technologies={['Python', 'PyTorch', 'Transformers', 'Computer Vision', 'NLP']}
+                githubUrl="https://github.com/SanjaayM7/End_to_End_Transformer_for_Image_to_Text"
+                imageUrl="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop"
               />
               
               <ProjectCard
-                title="ML Prediction Model"
-                description="Machine learning model for predicting customer behavior using scikit-learn. Achieved 92% accuracy with ensemble methods and feature engineering."
-                technologies={['Python', 'Scikit-learn', 'NumPy', 'Matplotlib']}
-                githubUrl="https://github.com/san7mr"
-                imageUrl="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
+                title="Agentic RAG Research Assistant"
+                description="An intelligent research assistant powered by Retrieval-Augmented Generation (RAG) and agentic AI. Combines large language models with dynamic information retrieval to provide accurate, contextual research assistance and automated knowledge synthesis."
+                technologies={['Python', 'LangChain', 'RAG', 'LLM', 'Vector Databases', 'AI Agents']}
+                githubUrl="https://github.com/SanjaayM7/Agentic_Rag_Research_Assistant"
+                imageUrl="https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=800&h=400&fit=crop"
               />
               
               <ProjectCard
-                title="Portfolio Website"
-                description="Responsive portfolio website built with React and TypeScript, featuring dark mode, smooth animations, and modern design principles."
-                technologies={['React', 'TypeScript', 'Tailwind CSS']}
-                githubUrl="https://github.com/san7mr"
-                liveUrl="#"
-                imageUrl="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop"
+                title="Spam Email Detection"
+                description="Machine learning-based email classification system that automatically identifies and filters spam emails. Uses natural language processing techniques and multiple classification algorithms to achieve high accuracy in spam detection."
+                technologies={['Python', 'Scikit-learn', 'NLP', 'Machine Learning', 'Text Processing']}
+                githubUrl="https://github.com/SanjaayM7/Spam-Email-Detection"
+                imageUrl="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&h=400&fit=crop"
               />
             </div>
           </Section>
@@ -115,47 +120,22 @@ function App() {
 
           {/* Skills Section */}
           <Section title="Technologies & Tools">
-            
-            <div className="space-y-2">
-              <h3 className="text-[1rem] text-zinc-600 dark:text-zinc-400">Languages:</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {['Html', 'Css', 'Javascript', 'Python'].map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-3 py-1 text-[0.9rem] rounded-full bg-white dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 shadow-sm hover:shadow-md hover:bg-zinc-50 dark:hover:bg-zinc-700/90 transition-all duration-200"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h3 className="text-[1rem] text-zinc-600 dark:text-zinc-400">Frameworks:</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {['React', 'Streamlit', 'Flask'].map((framework) => (
-                  <span 
-                    key={framework}
-                    className="px-3 py-1 text-[0.9rem] rounded-full bg-white dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 shadow-sm hover:shadow-md hover:bg-zinc-50 dark:hover:bg-zinc-700/90 transition-all duration-200"
-                  >
-                    {framework}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h3 className="text-[1rem] text-zinc-600 dark:text-zinc-400">Tools & Databases:</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {['Git', 'MySQL', 'Supabase', 'Pandas', 'NumPy', 'Scikit-learn'].map((tool) => (
-                  <span 
-                    key={tool}
-                    className="px-3 py-1 text-[0.9rem] rounded-full bg-white dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 shadow-sm hover:shadow-md hover:bg-zinc-50 dark:hover:bg-zinc-700/90 transition-all duration-200"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'Python', 'JavaScript', 'HTML', 'CSS', 'React', 'TypeScript',
+                'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy',
+                'LangChain', 'Transformers', 'OpenCV', 'NLP', 'Computer Vision',
+                'Machine Learning', 'Deep Learning', 'RAG', 'LLM', 'AI Agents',
+                'Git', 'MySQL', 'Vector Databases', 'Streamlit', 'Flask',
+                'Jupyter', 'Google Colab', 'AWS', 'Docker'
+              ].map((tech) => (
+                <span 
+                  key={tech}
+                  className="px-3 py-1.5 text-sm rounded-lg bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800/80 dark:to-zinc-700/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-600/30 hover:shadow-md hover:scale-105 hover:border-zinc-300 dark:hover:border-zinc-500 transition-all duration-200 cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </Section>
 
