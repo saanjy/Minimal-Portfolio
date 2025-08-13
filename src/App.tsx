@@ -85,7 +85,9 @@ function App() {
           <Section title="About">
             <div className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/40 border-white/50'}`}>
               <p className={`text-lg leading-relaxed ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
+                I'm a passionate data analyst and machine learning enthusiast with a strong foundation in web development. 
+                Currently pursuing my studies while gaining hands-on experience through internships and personal projects. 
+                I enjoy turning complex data into actionable insights and building intelligent systems that solve real-world problems.
               </p>
             </div>
           </Section>
