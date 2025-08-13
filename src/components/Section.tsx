@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from '../ThemeProvider';
 
 interface SectionProps {
   title: string;
@@ -7,9 +8,11 @@ interface SectionProps {
 }
 
 export function Section({ title, children, className = "" }: SectionProps) {
+  const { theme } = useTheme();
+  
   return (
-    <section className={`space-y-4 ${className}`}>
-      <h2 className="text-[1.65rem] tracking-tight font-medium text-zinc-900 dark:text-zinc-100">
+    <section className={`space-y-6 ${className}`}>
+      <h2 className={`text-[2rem] tracking-tight font-bold ${theme === 'dark' ? 'text-slate-100' : 'text-slate-900'}`}>
         {title}
       </h2>
       {children}
