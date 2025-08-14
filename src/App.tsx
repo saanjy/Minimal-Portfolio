@@ -38,9 +38,6 @@ function App() {
             <p className={`text-xl md:text-2xl mb-8 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
               Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
             </p>
-            <p className={`text-lg leading-relaxed max-w-2xl ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-              Passionate about solving problems with data and building intelligent systems. Currently pursuing my studies while gaining hands-on experience through internships and personal projects. I enjoy turning complex data into actionable insights and building intelligent systems that solve real-world problems.
-            </p>
           </div>
           
           <div className="flex items-center gap-6 mb-8">
@@ -93,22 +90,25 @@ function App() {
         </section>
 
         {/* Experience Section */}
-        <section className="mb-20">
+        <section className="mb-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-3xl"></div>
+          <div className="relative p-8">
           <h2 className="text-3xl font-bold mb-8">Experience</h2>
           <div className="space-y-6">
             <div className={`p-6 rounded-xl transition-all duration-300 hover:scale-[1.02] ${
-              theme === 'dark' ? 'bg-slate-900 hover:bg-slate-800' : 'bg-slate-50 hover:bg-slate-100'
+              theme === 'dark' ? 'bg-slate-900/80 hover:bg-slate-800 border border-slate-800' : 'bg-white hover:bg-slate-50 border border-slate-200 shadow-sm'
             }`}>
               <h3 className="text-xl font-semibold mb-2">Data Analyst Intern</h3>
               <p className={`${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>Skillcraft</p>
             </div>
             
             <div className={`p-6 rounded-xl transition-all duration-300 hover:scale-[1.02] ${
-              theme === 'dark' ? 'bg-slate-900 hover:bg-slate-800' : 'bg-slate-50 hover:bg-slate-100'
+              theme === 'dark' ? 'bg-slate-900/80 hover:bg-slate-800 border border-slate-800' : 'bg-white hover:bg-slate-50 border border-slate-200 shadow-sm'
             }`}>
               <h3 className="text-xl font-semibold mb-2">Design Lead</h3>
               <p className={`${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>Chipset</p>
             </div>
+          </div>
           </div>
         </section>
 
@@ -140,33 +140,38 @@ function App() {
         </section>
 
         {/* Technologies Section */}
-        <section className="mb-20">
+        <section className="mb-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl"></div>
+          <div className="relative p-8">
           <h2 className="text-3xl font-bold mb-8">Technologies & Tools</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'Python', 'JavaScript', 'HTML', 'CSS', 'React', 'TypeScript',
-              'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy',
-              'LangChain', 'Transformers', 'OpenCV', 'NLP', 'Computer Vision',
-              'Machine Learning', 'Deep Learning', 'RAG', 'LLM', 'AI Agents',
-              'Git', 'MySQL', 'Vector Databases', 'Streamlit', 'Flask', 'Figma',
-              'Photoshop', 'Framer', 'Jupyter', 'Google Colab', 'AWS', 'Docker'
+              'Python', 'JavaScript', 'React', 'TypeScript',
+              'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 
+              'LangChain', 'Transformers', 'OpenCV', 'NLP',
+              'Machine Learning', 'Deep Learning', 'RAG', 'LLM',
+              'Git', 'MySQL', 'Streamlit', 'Flask', 
+              'Figma', 'Photoshop', 'Framer', 'Jupyter', 'AWS'
             ].map((tech) => (
               <span 
                 key={tech}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105 ${
+                className={`px-4 py-3 text-sm font-medium rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                   theme === 'dark' 
-                    ? 'bg-slate-800 text-slate-300 hover:bg-slate-700' 
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700' 
+                    : 'bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 shadow-sm'
                 }`}
               >
                 {tech}
               </span>
             ))}
           </div>
+          </div>
         </section>
 
         {/* Learning Section */}
-        <section className="mb-20">
+        <section className="mb-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-3xl"></div>
+          <div className="relative p-8">
           <h2 className="text-3xl font-bold mb-8">What I'm Currently Learning</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -176,14 +181,15 @@ function App() {
             ].map((item, index) => (
               <div 
                 key={index}
-                className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 ${
-                  theme === 'dark' ? 'bg-slate-900 hover:bg-slate-800' : 'bg-slate-50 hover:bg-slate-100'
+                className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                  theme === 'dark' ? 'bg-slate-900/80 hover:bg-slate-800 border border-slate-800' : 'bg-white hover:bg-slate-50 border border-slate-200 shadow-sm'
                 }`}
               >
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <p className="font-semibold text-lg">{item.title}</p>
               </div>
             ))}
+          </div>
           </div>
         </section>
 
