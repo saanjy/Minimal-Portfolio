@@ -51,9 +51,6 @@ function App() {
               <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20' : 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10'} backdrop-blur-sm border border-white/10`}>
                 <Code2 size={24} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
               </div>
-              <span className={`text-sm font-medium px-3 py-1 rounded-full ${theme === 'dark' ? 'bg-slate-800/60 text-slate-300' : 'bg-white/60 text-slate-600'} backdrop-blur-sm border border-white/20`}>
-                Available for opportunities
-              </span>
             </div>
             
             <h1 className="text-[3.5rem] leading-[0.9] tracking-tight font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-slate-100 dark:via-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
@@ -62,10 +59,7 @@ function App() {
             
             <div className="space-y-3 text-[1.2rem] leading-relaxed">
               <p className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}`}>
-                Founder, Student, Data Analyst, Machine Learning Enthusiast, and Networking.
-              </p>
-              <p className={`${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                Passionate about solving problems with data and building intelligent systems.
+                Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
               </p>
             </div>
             
@@ -85,9 +79,7 @@ function App() {
           <Section title="About">
             <div className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/40 border-white/50'}`}>
               <p className={`text-lg leading-relaxed ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                I'm a passionate data analyst and machine learning enthusiast with a strong foundation in web development. 
-                Currently pursuing my studies while gaining hands-on experience through internships and personal projects. 
-                I enjoy turning complex data into actionable insights and building intelligent systems that solve real-world problems.
+                Passionate about solving problems with data and building intelligent systems. Currently pursuing my studies while gaining hands-on experience through internships and personal projects. I enjoy turning complex data into actionable insights and building intelligent systems that solve real-world problems.
               </p>
             </div>
           </Section>
@@ -122,7 +114,7 @@ function App() {
           <Section title="Experience">
             <div className="space-y-4">
               <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-start justify-between mb-3">
+                <div className="flex items-start mb-3">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-blue-900/30' : 'bg-blue-100/80'}`}>
                       <Zap size={16} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
@@ -136,17 +128,11 @@ function App() {
                       </p>
                     </div>
                   </div>
-                  <span className={`text-sm px-3 py-1 rounded-full ${theme === 'dark' ? 'bg-slate-700/60 text-slate-300' : 'bg-slate-100/80 text-slate-600'}`}>
-                    2024
-                  </span>
                 </div>
-                <p className={`${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                  Analyzed customer data and created automated reports, improving decision-making processes by 30%.
-                </p>
               </div>
               
               <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-start justify-between mb-3">
+                <div className="flex items-start mb-3">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-purple-900/30' : 'bg-purple-100/80'}`}>
                       <Sparkles size={16} className={theme === 'dark' ? 'text-purple-400' : 'text-purple-600'} />
@@ -160,13 +146,7 @@ function App() {
                       </p>
                     </div>
                   </div>
-                  <span className={`text-sm px-3 py-1 rounded-full ${theme === 'dark' ? 'bg-slate-700/60 text-slate-300' : 'bg-slate-100/80 text-slate-600'}`}>
-                    2023
-                  </span>
                 </div>
-                <p className={`${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                  Led UI/UX design initiatives and collaborated with development teams to create user-centered solutions.
-                </p>
               </div>
             </div>
           </Section>
@@ -219,13 +199,9 @@ function App() {
 
           {/* Contact Section */}
           <Section title="Let's Connect">
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border ${theme === 'dark' ? 'bg-gradient-to-r from-slate-800/40 to-slate-700/40 border-slate-700/50' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
-              <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                I'm always interested in discussing new opportunities, collaborating on projects, or just having a chat about data science and technology.
-              </p>
-              
+            <div className={`p-6 rounded-2xl backdrop-blur-sm border text-center ${theme === 'dark' ? 'bg-gradient-to-r from-slate-800/40 to-slate-700/40 border-slate-700/50' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
               {/* Social Links */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <a 
                   href="https://github.com/san7mr" 
                   target="_blank"
