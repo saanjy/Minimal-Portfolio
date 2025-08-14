@@ -194,17 +194,19 @@ function App() {
         </section>
 
         {/* Contact Section */}
-        <section className="text-center">
+        <section className="text-center relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-3xl"></div>
+          <div className="relative p-8">
           <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
           <div className="flex items-center justify-center gap-4">
             <a 
               href="https://github.com/san7mr" 
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                 theme === 'dark' 
-                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300' 
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700' 
+                  : 'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm'
               }`}
             >
               <Github size={18} />
@@ -214,10 +216,10 @@ function App() {
               href="https://medium.com/@sanjay77mr" 
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                 theme === 'dark' 
-                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300' 
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700' 
+                  : 'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm'
               }`}
             >
               <BookOpen size={18} />
@@ -225,15 +227,16 @@ function App() {
             </a>
             <a 
               href="mailto:sanjay77mr@gmail.com" 
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                 theme === 'dark' 
-                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300' 
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700' 
+                  : 'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm'
               }`}
             >
               <Mail size={18} />
               <span>Email</span>
             </a>
+          </div>
           </div>
         </section>
       </main>
