@@ -48,7 +48,7 @@ function App() {
           {/* Hero Section */}
           <div className="space-y-6 relative">
             <div className="flex items-center gap-3 mb-4">
-              <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20' : 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10'} backdrop-blur-sm border border-white/10`}>
+              <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-slate-800/60' : 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10'} backdrop-blur-sm border ${theme === 'dark' ? 'border-slate-700/50' : 'border-white/10'}`}>
                 <Code2 size={24} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
               </div>
             </div>
@@ -64,46 +64,30 @@ function App() {
             </div>
             
             <div className="flex flex-wrap items-center gap-4 pt-6">
-              <div className={`flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300' : 'bg-white/60 border-white/50 text-slate-600'}`}>
+              <div className={`flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${theme === 'dark' ? 'bg-slate-800/80 border-slate-700/60 text-slate-300' : 'bg-white/60 border-white/50 text-slate-600'}`}>
                 <MapPin size={14} />
                 <span>India</span>
               </div>
-              <div className={`flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${theme === 'dark' ? 'bg-emerald-900/30 border-emerald-700/50 text-emerald-300' : 'bg-emerald-50/80 border-emerald-200/50 text-emerald-700'}`}>
-                <Sparkles size={14} />
-                <span>Open to collaborate</span>
-              </div>
             </div>
           </div>
-
-          {/* About Section */}
-          <Section title="About">
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/40 border-white/50'}`}>
-              <p className={`text-lg leading-relaxed ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                Passionate about solving problems with data and building intelligent systems. Currently pursuing my studies while gaining hands-on experience through internships and personal projects. I enjoy turning complex data into actionable insights and building intelligent systems that solve real-world problems.
-              </p>
-            </div>
-          </Section>
 
           {/* Projects Section */}
           <Section title="Featured Projects">
             <div className="grid gap-8">
               <ProjectCard
                 title="End-to-End Transformer for Image to Text"
-                description="A complete transformer-based model for image captioning that converts visual content into descriptive text. Implements attention mechanisms and encoder-decoder architecture for accurate image understanding and natural language generation."
                 technologies={['Python', 'PyTorch', 'Transformers', 'Computer Vision', 'NLP']}
                 githubUrl="https://github.com/SanjaayM7/End_to_End_Transformer_for_Image_to_Text"
               />
               
               <ProjectCard
                 title="Agentic RAG Research Assistant"
-                description="An intelligent research assistant powered by Retrieval-Augmented Generation (RAG) and agentic AI. Combines large language models with dynamic information retrieval to provide accurate, contextual research assistance and automated knowledge synthesis."
                 technologies={['Python', 'LangChain', 'RAG', 'LLM', 'Vector Databases', 'AI Agents']}
                 githubUrl="https://github.com/SanjaayM7/Agentic_Rag_Research_Assistant"
               />
               
               <ProjectCard
                 title="Spam Email Detection"
-                description="Machine learning-based email classification system that automatically identifies and filters spam emails. Uses natural language processing techniques and multiple classification algorithms to achieve high accuracy in spam detection."
                 technologies={['Python', 'Scikit-learn', 'NLP', 'Machine Learning', 'Text Processing']}
                 githubUrl="https://github.com/SanjaayM7/Spam-Email-Detection"
               />
@@ -113,10 +97,10 @@ function App() {
           {/* Experience Section */}
           <Section title="Experience">
             <div className="space-y-4">
-              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
+              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
                 <div className="flex items-start mb-3">
                   <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-blue-900/30' : 'bg-blue-100/80'}`}>
+                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-blue-100/80'}`}>
                       <Zap size={16} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
                     </div>
                     <div>
@@ -131,10 +115,10 @@ function App() {
                 </div>
               </div>
               
-              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
+              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
                 <div className="flex items-start mb-3">
                   <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-purple-900/30' : 'bg-purple-100/80'}`}>
+                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-purple-100/80'}`}>
                       <Sparkles size={16} className={theme === 'dark' ? 'text-purple-400' : 'text-purple-600'} />
                     </div>
                     <div>
@@ -166,7 +150,7 @@ function App() {
                   key={tech}
                   className={`px-4 py-2 text-sm font-medium rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-default ${
                     theme === 'dark' 
-                      ? 'bg-gradient-to-r from-slate-800/60 to-slate-700/60 text-slate-300 border-slate-600/40 hover:from-slate-700/80 hover:to-slate-600/80 hover:border-slate-500/60' 
+                      ? 'bg-slate-800/70 text-slate-300 border-slate-700/60 hover:bg-slate-700/80 hover:border-slate-600/70' 
                       : 'bg-gradient-to-r from-white/60 to-slate-50/60 text-slate-700 border-white/50 hover:from-white/80 hover:to-slate-50/80 hover:border-slate-200/60'
                   }`}
                 >
@@ -176,37 +160,19 @@ function App() {
             </div>
           </Section>
 
-          {/* Learning Section */}
-          <Section title="What I'm Currently Learning">
-            <div className="grid gap-4 md:grid-cols-3">
-              {[
-                { title: 'Advanced ML & Deep Learning', icon: '🧠' },
-                { title: 'Cloud Computing (AWS/GCP)', icon: '☁️' },
-                { title: 'Advanced UI/UX Design', icon: '🎨' }
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className={`group p-4 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}
-                >
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className={`font-medium ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
-                    {item.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Section>
-
           {/* Contact Section */}
-          <Section title="Let's Connect">
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border text-center ${theme === 'dark' ? 'bg-gradient-to-r from-slate-800/40 to-slate-700/40 border-slate-700/50' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
+          <div className="text-center space-y-6">
+            <h2 className={`text-[2rem] tracking-tight font-bold ${theme === 'dark' ? 'text-slate-100' : 'text-slate-900'}`}>
+              Let's Connect
+            </h2>
+            <div className={`p-6 rounded-2xl backdrop-blur-sm border ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
               {/* Social Links */}
               <div className="flex items-center justify-center gap-4">
                 <a 
                   href="https://github.com/san7mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="GitHub"
                 >
                   <Github size={18} />
@@ -216,7 +182,7 @@ function App() {
                   href="https://medium.com/@sanjay77mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="Medium"
                 >
                   <BookOpen size={18} />
@@ -224,7 +190,7 @@ function App() {
                 </a>
                 <a 
                   href="mailto:sanjay77mr@gmail.com" 
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="Email"
                 >
                   <Mail size={18} />
@@ -232,7 +198,7 @@ function App() {
                 </a>
               </div>
             </div>
-          </Section>
+          </div>
         </section>
       </main>
     </div>
