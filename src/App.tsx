@@ -160,64 +160,43 @@ function App() {
           {/* Learning Section */}
           <Section title="What I'm Currently Learning">
             <div className="grid gap-4 md:grid-cols-3">
-              {[
-                { title: 'Advanced ML & Deep Learning', icon: '🧠' },
-                { title: 'Cloud Computing (AWS/GCP)', icon: '☁️' },
-                { title: 'Advanced UI/UX Design', icon: '🎨' }
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className={`group p-4 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}
-                >
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className={`font-medium ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
-                    {item.title}
-                  </p>
-                  <span className={`text-sm font-mono ${theme === 'dark' ? 'text-zinc-500' : 'text-gray-500'}`}>
-                    Dec 2024 - Jan 2025
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Section>
-
           {/* Contact Section */}
           <Section title="Let's Connect">
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border text-center ${theme === 'dark' ? 'bg-gradient-to-r from-slate-800/40 to-slate-700/40 border-slate-700/50' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
-              {/* Social Links */}
-              <div className="flex items-center justify-center gap-4">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-6 md:hidden">
                 <a 
                   href="https://github.com/san7mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="GitHub"
+                  className={`p-3 rounded-full transition-all duration-300 hover:scale-110 ${theme === 'dark' ? 'bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-black'}`}
                 >
-                  <Github size={18} />
-                  <span className="font-medium">GitHub</span>
+                  <Github size={20} />
                 </a>
                 <a 
                   href="https://medium.com/@sanjay77mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="Medium"
+                  className={`p-3 rounded-full transition-all duration-300 hover:scale-110 ${theme === 'dark' ? 'bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-black'}`}
                 >
-                  <BookOpen size={18} />
-                  <span className="font-medium">Medium</span>
+                  <BookOpen size={20} />
                 </a>
                 <a 
                   href="mailto:sanjay77mr@gmail.com" 
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/50 text-slate-300 hover:text-slate-100' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="Email"
+                  className={`p-3 rounded-full transition-all duration-300 hover:scale-110 ${theme === 'dark' ? 'bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-black'}`}
                 >
-                  <Mail size={18} />
-                  <span className="font-medium">Email</span>
+                  <Mail size={20} />
                 </a>
               </div>
             </div>
           </Section>
         </section>
+
+        {/* Footer */}
+        <footer className="mt-20 pb-8 text-center">
+          <p className={`text-sm ${theme === 'dark' ? 'text-zinc-500' : 'text-gray-500'}`}>
+            © 2025 Sanjay
+          </p>
+        </footer>
       </main>
     </div>
   );

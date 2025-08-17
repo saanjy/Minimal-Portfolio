@@ -13,38 +13,38 @@ export function ProjectCard({ title, description, technologies, githubUrl }: Pro
   const { theme } = useTheme();
   
   return (
-    <div className={`group relative p-8 rounded-2xl backdrop-blur-sm border transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl ${
+    <div className={`group relative p-6 rounded-lg border transition-all duration-300 hover:scale-[1.02] ${
       theme === 'dark' 
-        ? 'bg-gradient-to-br from-slate-800/60 to-slate-900/60 border-slate-700/50 hover:from-slate-800/80 hover:to-slate-900/80 hover:border-slate-600/60' 
-        : 'bg-gradient-to-br from-white/60 to-slate-50/60 border-white/50 hover:from-white/80 hover:to-slate-50/80 hover:border-slate-200/60'
+        ? 'bg-zinc-900/50 border-zinc-800 hover:bg-zinc-900/70' 
+        : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
     }`}>
       {/* Decorative element */}
-      <div className={`absolute top-6 right-6 p-2 rounded-lg transition-all duration-300 group-hover:scale-110 ${
-        theme === 'dark' ? 'bg-slate-700/50' : 'bg-slate-100/80'
+      <div className={`absolute top-4 right-4 p-2 rounded-md transition-all duration-300 group-hover:scale-110 ${
+        theme === 'dark' ? 'bg-zinc-800' : 'bg-gray-200'
       }`}>
-        <Code2 size={20} className={theme === 'dark' ? 'text-slate-400' : 'text-slate-600'} />
+        <Code2 size={16} className={theme === 'dark' ? 'text-zinc-400' : 'text-gray-600'} />
       </div>
       
-      <div className="space-y-6">
-        <div className="space-y-3 pr-12">
-          <h3 className={`text-xl font-bold leading-tight transition-colors duration-200 ${
-            theme === 'dark' ? 'text-slate-100 group-hover:text-white' : 'text-slate-900 group-hover:text-slate-800'
+      <div className="space-y-4">
+        <div className="space-y-2 pr-10">
+          <h3 className={`text-lg font-semibold leading-tight ${
+            theme === 'dark' ? 'text-white' : 'text-black'
           }`}>
             {title}
           </h3>
-          <p className={`leading-relaxed ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
+          <p className={`text-sm leading-relaxed ${theme === 'dark' ? 'text-zinc-400' : 'text-gray-600'}`}>
             {description}
           </p>
         </div>
         
-        <div className="flex flex-wrap gap-2.5">
+        <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <span 
               key={tech}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105 ${
+              className={`px-2 py-1 text-xs rounded transition-all duration-200 ${
                 theme === 'dark' 
-                  ? 'bg-slate-700/60 text-slate-300 border border-slate-600/40' 
-                  : 'bg-slate-100/80 text-slate-700 border border-slate-200/60'
+                  ? 'bg-zinc-800 text-zinc-300' 
+                  : 'bg-gray-200 text-gray-700'
               }`}
             >
               {tech}
@@ -52,19 +52,19 @@ export function ProjectCard({ title, description, technologies, githubUrl }: Pro
           ))}
         </div>
         
-        <div className={`flex items-center pt-4 border-t ${theme === 'dark' ? 'border-slate-700/50' : 'border-slate-200/50'}`}>
+        <div className={`flex items-center pt-3 border-t ${theme === 'dark' ? 'border-zinc-800' : 'border-gray-200'}`}>
           {githubUrl && (
             <a 
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+              className={`flex items-center gap-2 px-3 py-1.5 rounded text-sm transition-all duration-300 hover:scale-105 ${
                 theme === 'dark' 
-                  ? 'bg-slate-700/50 text-slate-300 hover:bg-slate-700/80 hover:text-slate-100' 
-                  : 'bg-slate-100/80 text-slate-700 hover:bg-slate-200/80 hover:text-slate-900'
+                  ? 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white' 
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-black'
               }`}
             >
-              <Github size={18} />
+              <Github size={16} />
               <span>View Code</span>
             </a>
           )}
