@@ -144,6 +144,16 @@ function App() {
                     <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-gray-600'}`}>
                       @Skillcraft
                     </p>
+                  </div>
+                </div>
+              </div>
+          </Section>
+
+          {/* Skills Section */}
+          <Section title="Skills & Technologies">
+            <div className="flex flex-wrap gap-3">
+              {['Python', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Git', 'Docker', 'AWS'].map((tech) => (
+                <span
                   key={tech}
                   className={`px-4 py-2 text-sm font-medium rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-default ${
                     theme === 'dark' 
@@ -160,6 +170,9 @@ function App() {
           {/* Learning Section */}
           <Section title="What I'm Currently Learning">
             <div className="grid gap-4 md:grid-cols-3">
+            </div>
+          </Section>
+
           {/* Contact Section */}
           <Section title="Let's Connect">
             <div className="text-center">
