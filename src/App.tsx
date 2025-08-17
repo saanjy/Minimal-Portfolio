@@ -59,7 +59,7 @@ function App() {
             
             <div className="space-y-3 text-[1.2rem] leading-relaxed">
               <p className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}`}>
-                Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
+                Data Analyst | AI/ML & NLP Enthusiast
               </p>
             </div>
             
