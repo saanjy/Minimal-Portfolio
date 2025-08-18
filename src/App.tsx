@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Moon, Sun, BookOpen, Mail, MapPin, Calendar, Code2, Sparkles, Zap } from 'lucide-react';
+import { Github, Moon, Sun, BookOpen, Mail, MapPin, Code2, Sparkles, Zap } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { ProjectCard } from './components/ProjectCard';
 import { Section } from './components/Section';
@@ -8,66 +8,85 @@ function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`min-h-screen font-sans relative overflow-hidden ${theme === 'dark' ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-zinc-100' : 'bg-gradient-to-br from-slate-50 via-white to-blue-50/30 text-zinc-900'} transition-all duration-700`}>
-      {/* Animated background elements */}
+    <div className={`min-h-screen font-sans transition-all duration-500 ${
+      theme === 'dark' 
+        ? 'bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white' 
+        : 'bg-gradient-to-br from-indigo-50 via-white to-cyan-50 text-gray-900'
+    }`}>
+      {/* Geometric background patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 animate-pulse ${theme === 'dark' ? 'bg-gradient-to-r from-blue-600 to-purple-600' : 'bg-gradient-to-r from-blue-400 to-indigo-400'}`} />
-        <div className={`absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-20 animate-pulse delay-1000 ${theme === 'dark' ? 'bg-gradient-to-r from-emerald-600 to-teal-600' : 'bg-gradient-to-r from-emerald-400 to-cyan-400'}`} />
-        <div className={`absolute top-3/4 left-1/2 w-64 h-64 rounded-full blur-3xl opacity-15 animate-pulse delay-2000 ${theme === 'dark' ? 'bg-gradient-to-r from-pink-600 to-rose-600' : 'bg-gradient-to-r from-pink-400 to-rose-400'}`} />
+        <div className={`absolute top-20 left-20 w-72 h-72 rounded-full blur-3xl opacity-30 ${
+          theme === 'dark' ? 'bg-purple-600' : 'bg-indigo-300'
+        }`} />
+        <div className={`absolute bottom-20 right-20 w-96 h-96 rounded-full blur-3xl opacity-20 ${
+          theme === 'dark' ? 'bg-cyan-600' : 'bg-purple-300'
+        }`} />
+        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-3xl opacity-25 ${
+          theme === 'dark' ? 'bg-pink-600' : 'bg-cyan-300'
+        }`} />
       </div>
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute w-1 h-1 rounded-full opacity-30 animate-float ${theme === 'dark' ? 'bg-white' : 'bg-slate-400'}`}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`
-            }}
-          />
-        ))}
-      </div>
+
+      {/* Grid pattern overlay */}
+      <div className={`absolute inset-0 opacity-5 ${
+        theme === 'dark' ? 'bg-white' : 'bg-gray-900'
+      }`} style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+        backgroundSize: '20px 20px'
+      }} />
 
       <button
         onClick={toggleTheme}
-        className="fixed top-6 right-6 p-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl shadow-2xl hover:shadow-3xl hover:scale-110 border border-white/20 dark:border-slate-700/50 transition-all duration-500 z-50 group"
+        className={`fixed top-8 right-8 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-50 ${
+          theme === 'dark' 
+            ? 'bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20' 
+            : 'bg-white/80 backdrop-blur-md border border-gray-200 hover:bg-white shadow-lg'
+        }`}
         aria-label="Toggle theme"
       >
         {theme === 'dark' ? 
-          <Sun size={20} className="text-amber-400 group-hover:rotate-180 transition-transform duration-500" /> : 
-          <Moon size={20} className="text-slate-600 group-hover:-rotate-12 transition-transform duration-500" />
+          <Sun size={24} className="text-yellow-400" /> : 
+          <Moon size={24} className="text-indigo-600" />
         }
       </button>
 
-      <main className="container mx-auto px-6 py-20 relative z-10">
-        <section className="max-w-3xl mx-auto space-y-12">
+      <main className="container mx-auto px-8 py-16 relative z-10 max-w-4xl">
+        <div className="space-y-16">
           {/* Hero Section */}
-          <div className="space-y-4 relative">
-            <div className="flex items-center gap-3 mb-4">
-              <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-slate-800/60' : 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10'} backdrop-blur-sm border ${theme === 'dark' ? 'border-slate-700/50' : 'border-white/10'}`}>
-                <Code2 size={24} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
-              </div>
+          <div className="text-center space-y-6">
+            <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-full ${
+              theme === 'dark' 
+                ? 'bg-white/10 backdrop-blur-md border border-white/20' 
+                : 'bg-white/70 backdrop-blur-md border border-indigo-200 shadow-lg'
+            }`}>
+              <Code2 size={20} className={theme === 'dark' ? 'text-cyan-400' : 'text-indigo-600'} />
+              <span className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+                Developer & Data Analyst
+              </span>
             </div>
             
-            <h1 className="text-[3.2rem] leading-[0.9] tracking-tight font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-slate-100 dark:via-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
-              Hi, i am Sanjay!
+            <h1 className={`text-6xl font-bold leading-tight ${
+              theme === 'dark' 
+                ? 'bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent' 
+                : 'bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent'
+            }`}>
+              Hi, I'm Sanjay!
             </h1>
             
-            <div className="space-y-2 text-[1.1rem] leading-relaxed">
-              <p className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}`}>
-                Data Analyst | AI/ML & NLP Enthusiast
-              </p>
-            </div>
+            <p className={`text-xl font-medium ${
+              theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+            }`}>
+              Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
+            </p>
             
-            <div className="flex flex-wrap items-center gap-3 pt-4">
-              <div className={`flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${theme === 'dark' ? 'bg-slate-800/80 border-slate-700/60 text-slate-300' : 'bg-white/60 border-white/50 text-slate-600'}`}>
-                <MapPin size={14} />
-                <span>India</span>
-              </div>
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
+              theme === 'dark' 
+                ? 'bg-white/5 border border-white/10' 
+                : 'bg-white/50 border border-gray-200'
+            }`}>
+              <MapPin size={16} className={theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} />
+              <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                India
+              </span>
             </div>
           </div>
 
@@ -96,39 +115,51 @@ function App() {
 
           {/* Experience Section */}
           <Section title="Experience">
-            <div className="space-y-3">
-              <div className={`group p-5 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.01] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-center">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-blue-100/80'}`}>
-                      <Zap size={16} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
-                    </div>
-                    <div>
-                      <h3 className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
-                        Data Analyst Intern
-                      </h3>
-                      <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                        @Skillcraft
-                      </p>
-                    </div>
+            <div className="grid gap-4">
+              <div className={`group p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] ${
+                theme === 'dark' 
+                  ? 'bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10' 
+                  : 'bg-white/70 backdrop-blur-md border border-gray-200 hover:bg-white/90 shadow-lg hover:shadow-xl'
+              }`}>
+                <div className="flex items-center gap-4">
+                  <div className={`p-3 rounded-xl ${
+                    theme === 'dark' ? 'bg-cyan-500/20' : 'bg-indigo-100'
+                  }`}>
+                    <Zap size={20} className={theme === 'dark' ? 'text-cyan-400' : 'text-indigo-600'} />
+                  </div>
+                  <div>
+                    <h3 className={`font-bold text-lg ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      Data Analyst Intern
+                    </h3>
+                    <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                      @Skillcraft
+                    </p>
                   </div>
                 </div>
               </div>
               
-              <div className={`group p-5 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.01] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-center">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-purple-100/80'}`}>
-                      <Sparkles size={16} className={theme === 'dark' ? 'text-purple-400' : 'text-purple-600'} />
-                    </div>
-                    <div>
-                      <h3 className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
-                        Design Lead
-                      </h3>
-                      <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                        @Chipset
-                      </p>
-                    </div>
+              <div className={`group p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] ${
+                theme === 'dark' 
+                  ? 'bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10' 
+                  : 'bg-white/70 backdrop-blur-md border border-gray-200 hover:bg-white/90 shadow-lg hover:shadow-xl'
+              }`}>
+                <div className="flex items-center gap-4">
+                  <div className={`p-3 rounded-xl ${
+                    theme === 'dark' ? 'bg-purple-500/20' : 'bg-purple-100'
+                  }`}>
+                    <Sparkles size={20} className={theme === 'dark' ? 'text-purple-400' : 'text-purple-600'} />
+                  </div>
+                  <div>
+                    <h3 className={`font-bold text-lg ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      Design Lead
+                    </h3>
+                    <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                      @Chipset
+                    </p>
                   </div>
                 </div>
               </div>
@@ -137,7 +168,7 @@ function App() {
 
           {/* Skills Section */}
           <Section title="Technologies & Tools">
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-3">
               {[
                 'Python', 'JavaScript', 'HTML', 'CSS', 'React', 'TypeScript',
                 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy',
@@ -148,10 +179,10 @@ function App() {
               ].map((tech) => (
                 <span 
                   key={tech}
-                  className={`px-3 py-1.5 text-sm font-medium rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default ${
+                  className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:scale-105 cursor-default ${
                     theme === 'dark' 
-                      ? 'bg-slate-800/70 text-slate-300 border-slate-700/60 hover:bg-slate-700/80 hover:border-slate-600/70' 
-                      : 'bg-gradient-to-r from-white/60 to-slate-50/60 text-slate-700 border-white/50 hover:from-white/80 hover:to-slate-50/80 hover:border-slate-200/60'
+                      ? 'bg-white/10 text-gray-300 border border-white/20 hover:bg-white/20' 
+                      : 'bg-white/70 text-gray-700 border border-gray-200 hover:bg-white shadow-md hover:shadow-lg'
                   }`}
                 >
                   {tech}
@@ -161,45 +192,61 @@ function App() {
           </Section>
 
           {/* Contact Section */}
-          <div className="text-center space-y-4">
-            <h2 className={`text-[1.8rem] tracking-tight font-bold ${theme === 'dark' ? 'text-slate-100' : 'text-slate-900'}`}>
+          <div className="text-center space-y-8">
+            <h2 className={`text-4xl font-bold ${
+              theme === 'dark' 
+                ? 'bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent' 
+                : 'bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent'
+            }`}>
               Let's Connect
             </h2>
-            <div className={`p-5 rounded-xl backdrop-blur-sm border ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
-              {/* Social Links */}
-              <div className="flex items-center justify-center gap-3">
-                <a 
-                  href="https://github.com/san7mr" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="GitHub"
-                >
-                  <Github size={18} />
-                  <span className="font-medium">GitHub</span>
-                </a>
-                <a 
-                  href="https://medium.com/@sanjay77mr" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="Medium"
-                >
-                  <BookOpen size={18} />
-                  <span className="font-medium">Medium</span>
-                </a>
-                <a 
-                  href="mailto:sanjay77mr@gmail.com" 
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
-                  aria-label="Email"
-                >
-                  <Mail size={18} />
-                  <span className="font-medium">Email</span>
-                </a>
-              </div>
+            
+            <div className="flex items-center justify-center gap-6">
+              <a 
+                href="https://github.com/san7mr" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
+                  theme === 'dark' 
+                    ? 'bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 hover:bg-white/20 hover:text-white' 
+                    : 'bg-white/70 backdrop-blur-md border border-gray-200 text-gray-700 hover:bg-white shadow-lg hover:shadow-xl'
+                }`}
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+                <span>GitHub</span>
+              </a>
+              
+              <a 
+                href="https://medium.com/@sanjay77mr" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
+                  theme === 'dark' 
+                    ? 'bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 hover:bg-white/20 hover:text-white' 
+                    : 'bg-white/70 backdrop-blur-md border border-gray-200 text-gray-700 hover:bg-white shadow-lg hover:shadow-xl'
+                }`}
+                aria-label="Medium"
+              >
+                <BookOpen size={20} />
+                <span>Medium</span>
+              </a>
+              
+              <a 
+                href="mailto:sanjay77mr@gmail.com" 
+                className={`group flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
+                  theme === 'dark' 
+                    ? 'bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 hover:bg-white/20 hover:text-white' 
+                    : 'bg-white/70 backdrop-blur-md border border-gray-200 text-gray-700 hover:bg-white shadow-lg hover:shadow-xl'
+                }`}
+                aria-label="Email"
+              >
+                <Mail size={20} />
+                <span>Email</span>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
       </main>
     </div>
   );
