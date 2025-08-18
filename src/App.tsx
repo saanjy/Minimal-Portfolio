@@ -44,26 +44,26 @@ function App() {
       </button>
 
       <main className="container mx-auto px-6 py-20 relative z-10">
-        <section className="max-w-3xl mx-auto space-y-16">
+        <section className="max-w-3xl mx-auto space-y-12">
           {/* Hero Section */}
-          <div className="space-y-6 relative">
+          <div className="space-y-4 relative">
             <div className="flex items-center gap-3 mb-4">
               <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-slate-800/60' : 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10'} backdrop-blur-sm border ${theme === 'dark' ? 'border-slate-700/50' : 'border-white/10'}`}>
                 <Code2 size={24} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
               </div>
             </div>
             
-            <h1 className="text-[3.5rem] leading-[0.9] tracking-tight font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-slate-100 dark:via-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
+            <h1 className="text-[3.2rem] leading-[0.9] tracking-tight font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-slate-100 dark:via-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
               Hi, i am Sanjay!
             </h1>
             
-            <div className="space-y-3 text-[1.2rem] leading-relaxed">
+            <div className="space-y-2 text-[1.1rem] leading-relaxed">
               <p className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}`}>
                 Data Analyst | AI/ML & NLP Enthusiast
               </p>
             </div>
             
-            <div className="flex flex-wrap items-center gap-4 pt-6">
+            <div className="flex flex-wrap items-center gap-3 pt-4">
               <div className={`flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${theme === 'dark' ? 'bg-slate-800/80 border-slate-700/60 text-slate-300' : 'bg-white/60 border-white/50 text-slate-600'}`}>
                 <MapPin size={14} />
                 <span>India</span>
@@ -73,7 +73,7 @@ function App() {
 
           {/* Projects Section */}
           <Section title="Featured Projects">
-            <div className="grid gap-8">
+            <div className="grid gap-6">
               <ProjectCard
                 title="End-to-End Transformer for Image to Text"
                 technologies={['Python', 'PyTorch', 'Transformers', 'Computer Vision', 'NLP']}
@@ -96,15 +96,15 @@ function App() {
 
           {/* Experience Section */}
           <Section title="Experience">
-            <div className="space-y-4">
-              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-start mb-3">
+            <div className="space-y-3">
+              <div className={`group p-5 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.01] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
+                <div className="flex items-center">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-blue-100/80'}`}>
                       <Zap size={16} className={theme === 'dark' ? 'text-blue-400' : 'text-blue-600'} />
                     </div>
                     <div>
-                      <h3 className={`font-semibold text-lg ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
+                      <h3 className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
                         Data Analyst Intern
                       </h3>
                       <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -115,14 +115,14 @@ function App() {
                 </div>
               </div>
               
-              <div className={`group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:scale-[1.02] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
-                <div className="flex items-start mb-3">
+              <div className={`group p-5 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.01] ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60 hover:bg-slate-800/80' : 'bg-white/40 border-white/50 hover:bg-white/60'}`}>
+                <div className="flex items-center">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-slate-700/60' : 'bg-purple-100/80'}`}>
                       <Sparkles size={16} className={theme === 'dark' ? 'text-purple-400' : 'text-purple-600'} />
                     </div>
                     <div>
-                      <h3 className={`font-semibold text-lg ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
+                      <h3 className={`font-semibold ${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'}`}>
                         Design Lead
                       </h3>
                       <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -137,7 +137,7 @@ function App() {
 
           {/* Skills Section */}
           <Section title="Technologies & Tools">
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5">
               {[
                 'Python', 'JavaScript', 'HTML', 'CSS', 'React', 'TypeScript',
                 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy',
@@ -148,7 +148,7 @@ function App() {
               ].map((tech) => (
                 <span 
                   key={tech}
-                  className={`px-4 py-2 text-sm font-medium rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-default ${
+                  className={`px-3 py-1.5 text-sm font-medium rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default ${
                     theme === 'dark' 
                       ? 'bg-slate-800/70 text-slate-300 border-slate-700/60 hover:bg-slate-700/80 hover:border-slate-600/70' 
                       : 'bg-gradient-to-r from-white/60 to-slate-50/60 text-slate-700 border-white/50 hover:from-white/80 hover:to-slate-50/80 hover:border-slate-200/60'
@@ -161,18 +161,18 @@ function App() {
           </Section>
 
           {/* Contact Section */}
-          <div className="text-center space-y-6">
-            <h2 className={`text-[2rem] tracking-tight font-bold ${theme === 'dark' ? 'text-slate-100' : 'text-slate-900'}`}>
+          <div className="text-center space-y-4">
+            <h2 className={`text-[1.8rem] tracking-tight font-bold ${theme === 'dark' ? 'text-slate-100' : 'text-slate-900'}`}>
               Let's Connect
             </h2>
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
+            <div className={`p-5 rounded-xl backdrop-blur-sm border ${theme === 'dark' ? 'bg-slate-800/60 border-slate-700/60' : 'bg-gradient-to-r from-white/40 to-slate-50/40 border-white/50'}`}>
               {/* Social Links */}
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-3">
                 <a 
                   href="https://github.com/san7mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="GitHub"
                 >
                   <Github size={18} />
@@ -182,7 +182,7 @@ function App() {
                   href="https://medium.com/@sanjay77mr" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="Medium"
                 >
                   <BookOpen size={18} />
@@ -190,7 +190,7 @@ function App() {
                 </a>
                 <a 
                   href="mailto:sanjay77mr@gmail.com" 
-                  className={`group flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-lg ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${theme === 'dark' ? 'bg-slate-700/60 border-slate-600/60 text-slate-300 hover:text-slate-100 hover:bg-slate-600/70' : 'bg-white/60 border-white/50 text-slate-600 hover:text-slate-800'}`}
                   aria-label="Email"
                 >
                   <Mail size={18} />
