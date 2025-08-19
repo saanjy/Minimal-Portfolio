@@ -28,24 +28,24 @@ function App() {
         }
       </button>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-4xl">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-20 sm:pb-12 max-w-4xl">
         <div className="space-y-8 sm:space-y-12">
           {/* Hero Section */}
-          <div className="text-center space-y-3 sm:space-y-4">
+          <div className="text-center space-y-3 sm:space-y-4 mt-4 sm:mt-0">
             <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border ${
               theme === 'dark' 
                 ? 'bg-gray-900 border-gray-800' 
                 : 'bg-gray-100 border-gray-300'
             }`}>
               <Code2 size={16} className="sm:w-[18px] sm:h-[18px]" />
-              <span className="font-medium text-sm sm:text-base">Developer & Data Analyst</span>
+              <span className="font-medium text-xs sm:text-sm whitespace-nowrap">Developer & Data Analyst</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-2">
               Hi, I'm Sanjay!
             </h1>
             
-            <p className={`text-base sm:text-lg px-4 sm:px-0 ${
+            <p className={`text-sm sm:text-base lg:text-lg px-4 sm:px-0 leading-relaxed ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
               Final Year Student | Data Analyst | AI/ML & NLP Enthusiast
