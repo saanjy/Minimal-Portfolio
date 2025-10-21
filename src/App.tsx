@@ -95,7 +95,7 @@ function App() {
                 <div className="flex items-center gap-3">
                   <Zap size={16} className="sm:w-[18px] sm:h-[18px] flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-sm sm:text-base">Data Analyst Intern</h3>
+                    <h3 className="font-semibold text-sm sm:text-base">Web Developer Intern</h3>
                     <p className={`text-xs sm:text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       @Skillcraft
                     </p>
