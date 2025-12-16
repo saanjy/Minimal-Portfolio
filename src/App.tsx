@@ -42,7 +42,7 @@ function App() {
             <div>
               <h1 className="text-2xl font-medium mb-1">Sanjay</h1>
               <p className={`text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Developer & Data Analyst
+                Engineer | Data Analyst
               </p>
             </div>
           </div>
