@@ -55,7 +55,7 @@ function App() {
 
         {/* Projects Section */}
         <section className="mb-20">
-          <h2 className="text-xl font-medium mb-8">Selected Work</h2>
+          <h2 className="text-xl font-medium mb-8">Projects</h2>
           
           <div className="space-y-8">
             {/* Project 1 */}
