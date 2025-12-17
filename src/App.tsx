@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Moon, Sun, BookOpen, Mail, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { Github, Moon, Sun, BookOpen, Mail, ExternalLink, ArrowUpRight, Linkedin, Twitter } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 function App() {
@@ -27,161 +27,165 @@ function App() {
         }
       </button>
 
-      {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        {/* Header Section */}
-        <header className="mb-20">
-          <div className="flex items-center gap-6 mb-8">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-gradient-to-br from-green-400 to-blue-500">
+      {/* Main Content - Centered */}
+      <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+        {/* Header Section - Centered */}
+        <header className="mb-16">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-20 h-20 rounded-full overflow-hidden mb-6">
               <img 
                 src="/src/assets/𝙄𝙯𝙪𝙠𝙪_𝙈𝙞𝙙𝙤𝙧𝙞𝙮𝙖___𝘿𝙚𝙠𝙪.jpg" 
                 alt="Sanjay"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div>
-              <h1 className="text-2xl font-medium mb-1">Sanjay</h1>
-              <p className={`text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Engineer | Data Analyst
-              </p>
-            </div>
+            <h1 className="text-3xl font-semibold mb-2">Sanjay</h1>
+            <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              Engineer / Data Analyst
+            </p>
           </div>
           
-          <p className={`text-lg leading-relaxed max-w-2xl ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-            Final year student who loves learning and experimenting with new ideas. I enjoy building intelligent systems and working with data to solve real-world problems, and I’m currently exploring automation and deep learning.
+          <p className={`text-lg leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+            Final year student who loves learning and experimenting with new ideas. I enjoy building intelligent systems and working with data to solve real-world problems, and I'm currently exploring automation and deep learning.
           </p>
         </header>
 
-        {/* Projects Section */}
-        <section className="mb-20">
-          <h2 className="text-xl font-medium mb-8">Projects</h2>
+        {/* Projects Section - Centered */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-12">Stuff I'm building</h2>
           
           <div className="space-y-8">
             {/* Project 1 */}
-            <div className={`group p-6 rounded-2xl transition-all duration-300 ${
+            <div className={`text-left p-6 rounded-2xl transition-all duration-300 ${
               theme === 'dark' 
-                ? 'bg-white/5 hover:bg-white/10' 
+                ? 'bg-white/5 hover:bg-white/8' 
                 : 'bg-gray-50 hover:bg-gray-100'
             }`}>
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-medium">End-to-End Transformer for Image to Text</h3>
                 <a 
                   href="https://github.com/SanjaayM7/End_to_End_Transformer_for_Image_to_Text"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-1 rounded transition-colors ${
                     theme === 'dark' 
                       ? 'hover:bg-white/10' 
                       : 'hover:bg-black/5'
                   }`}
                 >
-                  <ArrowUpRight size={18} />
+                  <ExternalLink size={16} />
                 </a>
               </div>
+              <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                Deep learning model that converts images to descriptive text using transformer architecture.
+              </p>
             </div>
 
             {/* Project 2 */}
-            <div className={`group p-6 rounded-2xl transition-all duration-300 ${
+            <div className={`text-left p-6 rounded-2xl transition-all duration-300 ${
               theme === 'dark' 
-                ? 'bg-white/5 hover:bg-white/10' 
+                ? 'bg-white/5 hover:bg-white/8' 
                 : 'bg-gray-50 hover:bg-gray-100'
             }`}>
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-medium">Agentic RAG Research Assistant</h3>
                 <a 
                   href="https://github.com/SanjaayM7/Agentic_Rag_Research_Assistant"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-1 rounded transition-colors ${
                     theme === 'dark' 
                       ? 'hover:bg-white/10' 
                       : 'hover:bg-black/5'
                   }`}
                 >
-                  <ArrowUpRight size={18} />
+                  <ExternalLink size={16} />
                 </a>
               </div>
+              <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                AI-powered research assistant using Retrieval-Augmented Generation for intelligent document analysis.
+              </p>
             </div>
 
             {/* Project 3 */}
-            <div className={`group p-6 rounded-2xl transition-all duration-300 ${
+            <div className={`text-left p-6 rounded-2xl transition-all duration-300 ${
               theme === 'dark' 
-                ? 'bg-white/5 hover:bg-white/10' 
+                ? 'bg-white/5 hover:bg-white/8' 
                 : 'bg-gray-50 hover:bg-gray-100'
             }`}>
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-medium">Spam Email Detection</h3>
                 <a 
                   href="https://github.com/SanjaayM7/Spam-Email-Detection"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-1 rounded transition-colors ${
                     theme === 'dark' 
                       ? 'hover:bg-white/10' 
                       : 'hover:bg-black/5'
                   }`}
                 >
-                  <ArrowUpRight size={18} />
+                  <ExternalLink size={16} />
                 </a>
               </div>
+              <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                Machine learning classifier for identifying spam emails with high accuracy.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section>
-          <h2 className="text-xl font-medium mb-8">Get in Touch</h2>
-          
-          <div className="flex flex-wrap gap-4">
+        {/* Social Icons - Centered */}
+        <section className="mb-12">
+          <div className="flex justify-center gap-6">
             <a 
               href="https://github.com/san7mr" 
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 ${
+              className={`p-3 rounded-full transition-all duration-300 ${
                 theme === 'dark' 
                   ? 'bg-white/5 hover:bg-white/10' 
-                  : 'bg-gray-50 hover:bg-gray-100'
+                  : 'bg-gray-100 hover:bg-gray-200'
               }`}
+              aria-label="GitHub"
             >
-              <Github size={18} />
-              <span>GitHub</span>
-              <ExternalLink size={14} className="opacity-50" />
+              <Github size={20} />
             </a>
             
             <a 
               href="https://medium.com/@sanjaay7" 
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 ${
+              className={`p-3 rounded-full transition-all duration-300 ${
                 theme === 'dark' 
                   ? 'bg-white/5 hover:bg-white/10' 
-                  : 'bg-gray-50 hover:bg-gray-100'
+                  : 'bg-gray-100 hover:bg-gray-200'
               }`}
+              aria-label="Medium"
             >
-              <BookOpen size={18} />
-              <span>Medium</span>
-              <ExternalLink size={14} className="opacity-50" />
+              <BookOpen size={20} />
             </a>
             
             <a 
               href="mailto:sanjay77mr@gmail.com" 
-              className={`flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 ${
+              className={`p-3 rounded-full transition-all duration-300 ${
                 theme === 'dark' 
                   ? 'bg-white/5 hover:bg-white/10' 
-                  : 'bg-gray-50 hover:bg-gray-100'
+                  : 'bg-gray-100 hover:bg-gray-200'
               }`}
+              aria-label="Email"
             >
-              <Mail size={18} />
-              <span>Email</span>
+              <Mail size={20} />
             </a>
           </div>
-          
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-            <p className={`text-sm text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-              © 2024 Sanjay. Based in India.
-            </p>
-          </div>
         </section>
+
+        {/* Footer - Centered */}
+        <footer className="pt-8 border-t border-gray-200 dark:border-gray-800">
+          <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+            © 2024 Sanjay. Based in India.
+          </p>
+        </footer>
       </div>
     </div>
   );
