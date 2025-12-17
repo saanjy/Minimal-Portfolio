@@ -79,23 +79,6 @@ function App() {
                   <ArrowUpRight size={18} />
                 </a>
               </div>
-              <p className={`mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                A complete transformer architecture for converting images to descriptive text using PyTorch and computer vision techniques.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'PyTorch', 'Transformers', 'Computer Vision', 'NLP'].map((tech) => (
-                  <span 
-                    key={tech}
-                    className={`px-3 py-1 text-sm rounded-full ${
-                      theme === 'dark' 
-                        ? 'bg-white/10 text-gray-300' 
-                        : 'bg-black/5 text-gray-700'
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
             </div>
 
             {/* Project 2 */}
@@ -118,23 +101,6 @@ function App() {
                 >
                   <ArrowUpRight size={18} />
                 </a>
-              </div>
-              <p className={`mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                An intelligent research assistant using RAG architecture with AI agents for enhanced information retrieval and analysis.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'LangChain', 'RAG', 'LLM', 'Vector Databases', 'AI Agents'].map((tech) => (
-                  <span 
-                    key={tech}
-                    className={`px-3 py-1 text-sm rounded-full ${
-                      theme === 'dark' 
-                        ? 'bg-white/10 text-gray-300' 
-                        : 'bg-black/5 text-gray-700'
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
               </div>
             </div>
 
@@ -159,94 +125,7 @@ function App() {
                   <ArrowUpRight size={18} />
                 </a>
               </div>
-              <p className={`mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Machine learning model for detecting spam emails using natural language processing and classification algorithms.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'Scikit-learn', 'NLP', 'Machine Learning', 'Text Processing'].map((tech) => (
-                  <span 
-                    key={tech}
-                    className={`px-3 py-1 text-sm rounded-full ${
-                      theme === 'dark' 
-                        ? 'bg-white/10 text-gray-300' 
-                        : 'bg-black/5 text-gray-700'
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
             </div>
-          </div>
-        </section>
-
-        {/* Experience Section */}
-        <section className="mb-20">
-          <h2 className="text-xl font-medium mb-8">Experience</h2>
-          
-          <div className="space-y-6">
-            <div className={`p-6 rounded-2xl ${
-              theme === 'dark' 
-                ? 'bg-white/5' 
-                : 'bg-gray-50'
-            }`}>
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="text-lg font-medium">Web Developer Intern</h3>
-                <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  2024
-                </span>
-              </div>
-              <p className={`text-sm mb-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Skillcraft
-              </p>
-              <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-                Developed responsive web applications and enhanced user experience through modern frontend technologies.
-              </p>
-            </div>
-
-            <div className={`p-6 rounded-2xl ${
-              theme === 'dark' 
-                ? 'bg-white/5' 
-                : 'bg-gray-50'
-            }`}>
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="text-lg font-medium">Design Lead</h3>
-                <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  2024
-                </span>
-              </div>
-              <p className={`text-sm mb-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Chipset
-              </p>
-              <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-                Led design initiatives and created user-centered interfaces for digital products.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section className="mb-20">
-          <h2 className="text-xl font-medium mb-8">Technologies</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              'Python', 'JavaScript', 'React', 'TypeScript', 'PyTorch', 'TensorFlow',
-              'Scikit-learn', 'Pandas', 'NumPy', 'LangChain', 'Transformers', 'OpenCV',
-              'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'RAG', 'LLM',
-              'Git', 'MySQL', 'AWS', 'Docker', 'Streamlit', 'Flask'
-            ].map((tech) => (
-              <div 
-                key={tech}
-                className={`p-4 rounded-xl text-center transition-colors ${
-                  theme === 'dark' 
-                    ? 'bg-white/5 hover:bg-white/10' 
-                    : 'bg-gray-50 hover:bg-gray-100'
-                }`}
-              >
-                <span className="text-sm font-medium">{tech}</span>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -271,7 +150,7 @@ function App() {
             </a>
             
             <a 
-              href="https://medium.com/@sanjay77mr" 
+              href="https://medium.com/@sanjaay7" 
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 ${
@@ -299,7 +178,7 @@ function App() {
           </div>
           
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-            <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+            <p className={`text-sm text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
               © 2024 Sanjay. Based in India.
             </p>
           </div>
