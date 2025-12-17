@@ -14,10 +14,10 @@ function App() {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className={`fixed top-6 right-6 p-3 rounded-full transition-all duration-300 z-50 ${
+        className={`fixed top-6 right-6 p-3 rounded-full transition-all duration-300 z-50 shadow-lg ${
           theme === 'dark' 
-            ? 'bg-white/10 hover:bg-white/20 backdrop-blur-sm' 
-            : 'bg-black/5 hover:bg-black/10'
+            ? 'bg-gray-800 hover:bg-gray-700 border border-gray-700' 
+            : 'bg-white hover:bg-gray-50 border border-gray-200'
         }`}
         aria-label="Toggle theme"
       >
@@ -45,7 +45,7 @@ function App() {
             </p>
           </div>
           
-          <p className={`text-lg leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-lg leading-relaxed text-justify ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
             Final year student who loves learning and experimenting with new ideas. I enjoy building intelligent systems and working with data to solve real-world problems, and I'm currently exploring automation and deep learning.
           </p>
         </header>
@@ -139,7 +139,7 @@ function App() {
         <section className="mb-12">
           <div className="flex justify-center gap-6">
             <a 
-              href="https://github.com/san7mr" 
+              href="https://github.com/SanjaayM7" 
               target="_blank"
               rel="noopener noreferrer"
               className={`p-3 rounded-full transition-all duration-300 ${
