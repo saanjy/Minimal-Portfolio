@@ -48,8 +48,7 @@ function App() {
           </div>
           
           <p className={`text-lg leading-relaxed max-w-2xl ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-            Final Year Student passionate about AI/ML and NLP. I build intelligent systems and analyze data to solve real-world problems. 
-            Currently exploring the intersection of computer vision and natural language processing.
+            Final year student who loves learning and experimenting with new ideas. I enjoy building intelligent systems and working with data to solve real-world problems, and I’m currently exploring automation and deep learning.
           </p>
         </header>
 
