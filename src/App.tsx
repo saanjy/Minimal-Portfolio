@@ -183,7 +183,7 @@ function App() {
         {/* Footer - Centered */}
         <footer className="pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-            © 2026 Sanjay.
+            © 2026 Sanjay
           </p>
         </footer>
       </div>
