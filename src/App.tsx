@@ -52,7 +52,7 @@ function App() {
 
         {/* Projects Section - Centered */}
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-12">Stuff I'm building</h2>
+          <h2 className="text-2xl font-semibold mb-12">Projects</h2>
           
           <div className="space-y-8">
             {/* Project 1 */}
