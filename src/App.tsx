@@ -1,5 +1,38 @@
 import { Github, Moon, Sun, BookOpen, Mail, ExternalLink } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 import { useTheme } from './ThemeProvider';
+
+function TokyoRain() {
+  const preRef = useRef<HTMLPreElement>(null);
+
+  useEffect(() => {
+    let stop: (() => void) | undefined;
+    const pre = preRef.current;
+    if (!pre) return;
+
+    (async () => {
+      try {
+        const [{ mount }, piece] = await Promise.all([
+          import(/* @vite-ignore */ 'https://ascii.rest/mount.js'),
+          import(/* @vite-ignore */ 'https://ascii.rest/pieces/tokyo-rain.js'),
+        ]);
+        stop = mount(pre, piece.default);
+      } catch (e) {
+        pre.textContent = '// tokyo rain failed to load';
+      }
+    })();
+
+    return () => stop?.();
+  }, []);
+
+  return (
+    <pre
+      ref={preRef}
+      className="w-full overflow-hidden text-left leading-[1] font-mono text-[5px] sm:text-[6px] md:text-[7px] whitespace-pre"
+      style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace' }}
+    />
+  );
+}
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -31,17 +64,15 @@ function App() {
         {/* Header Section - Centered */}
         <header className="mb-16">
           <div className="flex flex-col items-center mb-8">
-            <div className="w-20 h-20 rounded-full overflow-hidden mb-6">
-              <img 
-                src="/𝙄𝙯𝙪𝙠𝙪_𝙈𝙞𝙙𝙤𝙧𝙞𝙮𝙖___𝘿𝙚𝙠𝙪.jpg" 
-                alt="Sanjay"
-                className="w-full h-full object-cover"
-              />
-            </div>
             <h1 className="text-3xl font-semibold mb-2">Sanjay</h1>
             <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
               Engineer / Data Analyst
             </p>
+          </div>
+
+          {/* Tokyo Rain ASCII Art */}
+          <div className="mb-8 flex justify-center">
+            <TokyoRain />
           </div>
           
           <p className={`text-lg leading-relaxed text-justify ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
