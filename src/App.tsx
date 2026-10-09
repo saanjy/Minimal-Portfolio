@@ -2,23 +2,24 @@ import { Github, Moon, Sun, BookOpen, Mail, ExternalLink } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { useTheme } from './ThemeProvider';
 
-function TokyoRain() {
-  const preRef = useRef<HTMLPreElement>(null);
+function KyotoDusk() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     let stop: (() => void) | undefined;
-    const pre = preRef.current;
-    if (!pre) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
     (async () => {
       try {
         const [{ mount }, piece] = await Promise.all([
           import(/* @vite-ignore */ 'https://ascii.rest/mount.js'),
-          import(/* @vite-ignore */ 'https://ascii.rest/pieces/tokyo-rain.js'),
+          import(/* @vite-ignore */ 'https://ascii.rest/pieces/kyoto-dusk.js'),
         ]);
-        stop = mount(pre, piece.default);
-      } catch (e) {
-        pre.textContent = '// tokyo rain failed to load';
+        stop = mount(canvas, piece.default);
+      } catch {
+        const context = canvas.getContext('2d');
+        context?.clearRect(0, 0, canvas.width, canvas.height);
       }
     })();
 
@@ -26,10 +27,10 @@ function TokyoRain() {
   }, []);
 
   return (
-    <pre
-      ref={preRef}
-      className="w-full overflow-hidden text-left leading-[1] font-mono text-[5px] sm:text-[6px] md:text-[7px] whitespace-pre"
-      style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace' }}
+    <canvas
+      ref={canvasRef}
+      className="block w-full rounded-2xl border border-white/10 bg-[#07060d] shadow-[0_20px_70px_rgba(0,0,0,0.35)]"
+      aria-label="Animated Kyoto pagoda at dusk"
     />
   );
 }
@@ -70,9 +71,9 @@ function App() {
             </p>
           </div>
 
-          {/* Tokyo Rain ASCII Art */}
+          {/* Kyoto Dusk ASCII Art */}
           <div className="mb-8 flex justify-center">
-            <TokyoRain />
+            <KyotoDusk />
           </div>
           
           <p className={`text-lg leading-relaxed text-justify ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
