@@ -1,5 +1,4 @@
-import React from 'react';
-import { Github, Moon, Sun, BookOpen, Mail, ExternalLink, ArrowUpRight, Linkedin, Twitter } from 'lucide-react';
+import { Github, Moon, Sun, BookOpen, Mail, ExternalLink } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 function App() {
