@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: #070710;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #070710;
 }
 
 /* Custom scrollbar */
@@ -27,37 +29,36 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0a0a14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.5);
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Smooth transitions */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  background: rgba(34, 211, 238, 0.3);
 }
 
 /* Selection styles */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(34, 211, 238, 0.3);
 }
 
-.dark ::selection {
-  background: rgba(59, 130, 246, 0.4);
+/* Monospace font helper */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ASCII art canvas styling */
+ascii-art canvas {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
